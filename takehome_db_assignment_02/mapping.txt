@@ -38,7 +38,8 @@ doctor(emp_id,dea_no)
 
 doctor_area(emp_id,area_of_speciality)
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------BROKE THESE BELOW CLASSES INTO SUBCLASS SUPERCLASS LEVELS THE METHOD WE HAVE WILL GIVE US MORE TABLES BUT SOLVES A HUGE PROBLEM THAT IS IF WE MAP THAT AS BEFORE THEN THERE ARE PROBELMS.(EXPLAIN LATER)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+BROKE THESE BELOW CLASSES INTO SUBCLASS SUPERCLASS LEVELS THE METHOD WE HAVE WILL GIVE US MORE TABLES BUT SOLVES A HUGE PROBLEM THAT IS IF WE MAP THAT AS BEFORE THEN THERE ARE PROBELMS.(EXPLAIN LATER)
 
 treat(code,name)
 
