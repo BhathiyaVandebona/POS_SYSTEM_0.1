@@ -1,0 +1,51 @@
+vendor(name,registration_no,address,contact_no) -- (assumed that the vendor can only have one contact number)
+
+supply(registration_no,drug_code,type,date,unit_cost,quantity,total_cost) -- (the registration_no,drug_code, and date is considered as primary key)
+
+emergency_contact(in_patient_id,fname,lname,realtionship,address)
+
+emergency_contacts_contact_numbers(fname,lname,contact_no)
+
+insurence_company(name,branch,address_of_branch,patient_id,sub_fname,sub_lname,relatioship,sub_contact,address) -- (the name,branch,patient_id is considered as the primary key)
+
+beds(patient_care_unit_id,bed_identifier)
+
+out_patient(patient_id,arrived_date,arrived_time)
+
+diagnosis(doctor_emp_id,patient_id,code,time,date,name,description) -- (emp_id,patient_id,date,time is considered as the primary key)
+
+report_information(nurse_emp_id,patient_id,date,time,symptoms,tempreture,weight,blood_pressure,pulse) -- (emp_id,patient_id,date,time is considered as the primary key)
+
+assigned(emp_id,patient_care_unit_id,hours_per_week) -- (here emp_id,patient_care_unit_id is considered as the primary key)
+
+treat(treat_id,time,date,patient_id,doctor_emp_id) -- (here the doctor_emp_id,patient_id,time,date is the primary key but a surrogate key treat_id is used)
+
+treat_treatments(treat_id,treatment_id) -- (the multivalued attributes are mapped the drugs and the test used in one treatment session)
+
+admitt(discharge_time,discharge_date,admitt_date,admitt_time,doc_employee_id,bed_id,patient_care_unit_id) -- (here the patient_care_unit_id,patient_id,doctor_emp_id,admitt_time,admitt_date is used as the primary key a surrogate key is needed)
+
+employee(emp_id,name,address,working_status)
+
+employee_contact_no(emp_id,contact_no)
+
+cleaners(emp_id,constract_no,constract_start_date,constract_end_date)
+
+attendant(emp_id,hourly_rate)
+
+med_staff(emp_id,med_council_no,resign_date,joined_date,nurse) -- (nurse is a boolean type)
+
+doctor(emp_id,dea_no)
+
+doctor_area(emp_id,area_of_speciality)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------BROKE THESE BELOW CLASSES INTO SUBCLASS SUPERCLASS LEVELS THE METHOD WE HAVE WILL GIVE US MORE TABLES BUT SOLVES A HUGE PROBLEM THAT IS IF WE MAP THAT AS BEFORE THEN THERE ARE PROBELMS.(EXPLAIN LATER)
+
+treat(code,name)
+
+drug(code,type)
+
+test(code,cost)
+
+patient(patient_id,name)
+
+out_patient(patient_id,arrived_time,arrived_date)
