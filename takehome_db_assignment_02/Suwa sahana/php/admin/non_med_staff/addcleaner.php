@@ -1,3 +1,8 @@
+<?php
+    require_once("../../conn.php");
+    $sql="SELECT patient_care_unit_id FROM patient_care_unit";
+    $result = mysqli_query($conn,$sql);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +19,7 @@
             <h1 class="sub-title">NON-Medical Staff</h1>
         </div>
         <div class="form-section">
-        <form action="loginprocess.php" method="post">
+        <form action="addcleanerpros.php" method="post">
             <h2 class="form-heading">Add a new Cleaner</h2>
                 <label for="name">name:</label>
                 <input type="text" name="name" placeholder="name" required><br>
@@ -28,9 +33,26 @@
                 <input type="date" name="c_start_date" placeholder="Contract start Date" required><br>
                 <label for="c_end_date">Contract end Date:</label>
                 <input type="date" name="c_end_date" placeholder="Contract end Date" required><br>
+                <label for="unit_no">Unit NO:</label>
+                <select name="unit_no" >
+                        <?php while($row = mysqli_fetch_array($result))
+                        {
+                        ?>
+                            <option value="<?php echo $row["patient_care_unit_id"]; ?>"><?php echo $row["patient_care_unit_id"]; ?></option>
+                        <?php
+                        }
+                        ?>      
+                </select>
+                <label for="h_for_week">No of Hours For Week:</label>
+                <input type="text"  name="h_for_week" placeholder="No of Hours For Week" required><br>
+                <label for="working-status">Working Status:</label>
+                <select name="working-status" >
+                        <option value="Full time">Full Time</option>
+                        <option value="Part time">Part time</option>
+                </select>
                 <div class="form-section-button">
-                    <button type="Submit" class="form-btn" name="login">Enter</button>
-                    <button type="reset" class="form-btn-1" name="login">Reset</button>   
+                    <button type="Submit" class="form-btn" name="enter">Enter</button>
+                    <button type="reset" class="form-btn-1" name="reset">Reset</button>   
                 </div>
         </form>
         </div>
