@@ -52,7 +52,7 @@
 
         //$row=mysqli_fetch_array($x);
         
-        $query2="insert into med_staff(employee_id,med_council_no,resign_date,joined_date,job_type) values('$employee_id','$Med_no','$R_date','$J_date','Doctor')"; "insert into doctors('$Emp_id','$DEA_no','$Sp_area')";"insert into assined('$Emp_id','$U_num','$H_hours')";
+        $query2="insert into med_staff(employee_id,med_council_no,resign_date,joined_date,job_type) values('$employee_id','$Med_no','$R_date','$J_date','Doctor')"; "insert into doctors('$employee_id','$DEA_no','$Sp_area')";"insert into assined('$employee_id','$U_num','$H_hours')";
         $result2=mysqli_query($conn,$query2);
         
 
