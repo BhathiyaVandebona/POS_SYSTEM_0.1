@@ -1,0 +1,19 @@
+This is a short explanation about the employee ids and their id management functions
+
+mainly the function used in this program is the parseKey function mentioned below.
+
+The medical staff ids
+
+Doctors -- >> MDD1200 (as in Medical Doctor)
+Nurses -- >> MDN1201 (as in Medical Nurse)
+
+The non-medical staff ids
+
+Cleaner -- >> NMDC1500 (as in Non-Medical Cleaner)
+Attendant -- >> NMDAT1501 (as in Non-Medical Attendant)
+Administrator -- >> NMDA1600 (as in Non-Medical Administrator)
+Receptionist -- >> NMDR1700 (as in Non-Medical Receptionist)
+
+The Employee ids as also the same above they are categorized in the above order if there is a need for some other non mentioned employee administrator can use
+
+Employee -- >> EMP1100 (as in Employee) for the identifier
