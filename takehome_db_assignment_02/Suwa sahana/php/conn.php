@@ -1,9 +1,9 @@
 <?php
 
-$dbServername ="localhost:3308";
+$dbServername ="localhost:4000";//3308
 $dbUsername ="root";
-$dbPassword ="";
-$dbName ="suwa_sahana_db";
+$dbPassword ="mysql";
+$dbName ="temporary_database";
 
 $conn =mysqli_connect($dbServername,$dbUsername,$dbPassword,$dbName);
 
@@ -15,6 +15,5 @@ $conn =mysqli_connect($dbServername,$dbUsername,$dbPassword,$dbName);
     {
         echo "Database Connected";
     }
-
 
 ?>

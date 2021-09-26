@@ -1,4 +1,5 @@
 <?php
+
 //this function will take a given key and will parse it and sill return an incremented key the id is needed to give the proper identifier prefix strings and the strat is where the parsing should start and is choosen automatically using the possible identifers,
 
 //Doctors -- >> MDD1200 (as in Medical Doctor)
